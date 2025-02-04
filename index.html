@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lacquer&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+NZ+Guides&family=Playwrite+US+Modern+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubbler+One&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lacquer&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Playwrite+NZ+Guides&family=Playwrite+US+Modern+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+        <!-- Navbar -->
+        <nav class="navbar">
+          <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="logo"><img src="charms-images/Charms Group of Companies Logo.png" alt=""></div>
+          <div class="nav-left">
+            <ul class="nav-links">
+              <li><a href="about.html">About</a></li>
+              <li><a href="leadership.html">Leadership</a></li>
+              <li><a href="#">Properties</a></li>
+            </ul>
+          </div>
+          <div class="nav-right">
+            <ul class="nav-links">
+              <li><a href="#">Media Center</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Our Presence</a></li>
+            </ul>
+          </div>
+        </nav>
+      
+        <!-- Modal Navigation -->
+        <div class="menu-modal" id="menuModal">
+          <span class="close-btn" onclick="toggleMenu()">×</span>
+          <a href="about.html">About</a>
+          <a href="#">Leadership</a>
+          <a href="#">Properties</a>
+          <a href="#">Media Center</a>
+          <a href="#">Careers</a>
+          <a href="#">Our Presence</a>
+        </div>
+      
+        <!-- Banner -->
+        <div class="banner">
+          <video class="banner-video" autoplay muted loop playsinline>
+            <source src="charms-images/banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="banner-overlay"></div>
+        </div>
+
+        <!-- About -->
+         <div class="about-container">
+          <img src="charms-images/WhatsApp Image 2025-01-13 at 14.26.04_d4e0a3a8.jpg" alt="">
+           <div class="about-cont">
+              <h3>OUR PROMISE</h3>
+              <h2>Your World <br> Our Commitment</h2>
+              <p>Charms is India’s leading real estate developer, delivering thoughtfully designed, premium properties that shape urban lifestyle.</p>
+              <button>Know More</button>
+           </div>
+         </div>
+
+
+         <div class="purpose-container">
+           <div class="purpose-cont">
+            <h3>OUR PURPOSE</h3>
+            <h2>Built Strong, Built Right</h2>
+            <p>Charms is committed to elevating the living experience while
+              emphasising the importance of creating a
+              positive impact on the environment and society.</p>
+
+           </div>
+           <div class="our-story">
+                <a href="">Our Story</a>
+           </div>
+           <div class="our-impact">
+              <a href="">Our Impact</a>
+           </div>
+           
+         </div>
+
+         
+             <!-- products -->
+             <div class="product-page-container">
+              <div class="product-title">
+                   <h3>Our Pride</h3>
+                  <h2>Iconic Projects</h2>
+              </div>
+              <div class="slider-container">
+                  <button class="slider-btn left-btn" id="prevBtn">&#8592;</button>
+                  <div class="slider-wrapper">
+                    <div class="slider" id="slider">
+
+                      <div class="card">
+                          <div class="product-image">
+                            <img src="charms-images/HEENA-ASHISH FRONT VIEW (1).jpeg" alt="">
+                          </div>
+                          <div class="product-cont">
+                            <h3>Project Name</h3>
+                          </div>
+                      </div>
+                      
+                      <div class="card">
+                          <div class="product-image">
+                            <img src="charms-images/e_final_004.jpeg" alt="">
+                          </div>
+                          <div class="product-cont">
+                            <h3>Project Name</h3>
+                          </div>
+                      </div>
+                      
+                      <div class="card">
+                          <div class="product-image">
+                            <img src="charms-images/project-4.jpg" alt="">
+                          </div>
+                          <div class="product-cont">
+                            <h3>Project Name</h3>
+                          </div>
+                      </div>
+
+                      <div class="card">
+                          <div class="product-image">
+                            <img src="charms-images/WhatsApp Image 2025-01-13 at 14.32.18_9cb287df.jpg" alt="">
+                          </div>
+                          <div class="product-cont">
+                            <h3>Project Name</h3>
+                          </div>
+                      </div>
+
+                      <div class="card">
+                          <div class="product-image">
+                            <img src="charms-images/WhatsApp Image 2025-01-13 at 14.26.03_8fd16e82.jpg" alt="">
+                          </div>
+                          <div class="product-cont">
+                            <h3>Project Name</h3>
+                          </div>
+                      </div>
+
+                      <div class="card">
+                          <div class="product-image">
+                            <img src="charms-images/e_final_004.jpeg" alt="">
+                          </div>
+                          <div class="product-cont">
+                            <h3>Project Name</h3>
+                          </div>
+                      </div>
+
+                      <div class="card">
+                          <div class="product-image">
+                            <img src="charms-images/project-4.jpg" alt="">
+                          </div>
+                          <div class="product-cont">
+                            <h3>Project Name</h3>
+                          </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <button class="slider-btn right-btn" id="nextBtn">&#8594;</button>
+                </div>
+                <div class="product-bottom">
+                  <button>View All Projects</button>
+                </div>
+          </div>
+
+
+          <!-- experience -->
+          <div class="experience-container">
+            <img src="charms-images/84770f_4021a43eb9af401cae8b9b2949e1d26bf000.avif" alt="">
+             <div class="exp-cont">
+                <h3>Our Experience</h3>
+                <h2>Experience Built on Trust</h2>
+                <p>We shape spaces that inspire, where every corner tells a story of thoughtful design, and every detail enhances your journey through life.</p>
+                <button>Know More</button>
+             </div>
+           </div>
+
+
+           <!-- brands -->
+            <div class="brand-container">
+              <h3>Our Brands</h3>
+              <div class="brands">
+                <img src="charms-images/BORGAONKAR-GROUP.png" alt="">
+                <img src="charms-images/ELIXIR.png" alt="">
+                <img src="charms-images/ELIXIR-KARUNALAYA.png" alt="">
+              </div>
+            </div>
+
+
+    <!-- footer -->
+
+   <footer>
+    <div class="footer-top">
+     <p>&copy; 2024 CHARMS . All Rights Reserved.</p>
+
+     <div class="social-icons">
+       <a href="#" ><img src="charms-images/icons8-facebook-logo-50.png" alt=""></a>
+       <a href="#" ><img src="charms-images/icons8-instagram-50 (1).png" alt=""></a>
+       <a href="#" ><img src="charms-images/icons8-youtube-50.png" alt=""></a>
+       <a href="#" ><img src="charms-images/icons8-linkedin-circled-50 (1).png" alt=""></a>
+     </div>
+
+     <div class="footer-links">
+       <a href="#">Privacy Policy</a>
+       <a href="#">Sitemap</a>
+     </div>
+
+    </div>
+
+    <!-- <div class="footer-bottom">
+     <div class="contact-option">
+       <img src="charms-images/icons8-mail-contact-50.png" alt="Enquiry Icon">
+       <span>Enquiry</span>
+     </div>
+     <div class="contact-option">
+       <img src="charms-images/icons8-phone-50 (2).png" alt="Call Icon">
+       <span>Call</span>
+     </div>
+     <div class="contact-option">
+       <img src="charms-images/icons8-whatsapp-50 (1).png" alt="WhatsApp Icon">
+       <span>WhatsApp</span>
+     </div>
+   </div> -->
+ </footer>
+
+
+
+<script src="script.js"></script>
+<script>
+    // Toggle menu modal
+    function toggleMenu() {
+      const menuModal = document.getElementById('menuModal');
+      menuModal.classList.toggle('active');
+    }
+  
+  </script>  
+</body>
+</html>
