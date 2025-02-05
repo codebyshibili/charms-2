@@ -60,3 +60,15 @@ updateButtons();
 
 
 
+
+
+
+
+ // Initialize AOS
+ document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 1000, // Animation duration
+    once: true,     // Run animation only once
+    easing: 'ease-in-out'
+  });
+});
