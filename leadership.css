@@ -1,0 +1,313 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    z-index: 1000;
+    border-bottom: 2px solid  rgb(69,94,43);
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .logo img{
+    width: 100px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    /* background-color: blue; */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+     color: black;
+     font-family: "Poppins", serif;
+    font-weight: 200;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(199,198,43);
+  }
+  
+
+  
+  /* Menu Icon (Mobile) */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 5%;
+  }
+  
+  .menu-icon div {
+    width: 25px;
+    height: 3px;
+    background: rgb(43,42,41);
+    margin-left: 10px;
+  }
+  
+  /* Modal for Mobile Nav */
+  .menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    padding: 50px 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .menu-modal.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-modal a {
+    text-decoration: none;
+    color: rgb(43,42,41);
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* Close Button for Modal */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .nav-left, .nav-right {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  
+    .logo {
+      position: static;
+      transform: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+    /* ...........ABOUT........... */
+    .about-title{
+        width: 100%;
+        padding: 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(250,255,248);
+    }
+    .about-title h2{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 26px;
+        color:rgb(199,198,43);
+    }
+  
+    .about-container{
+        width: 100%;
+        height: auto;
+        padding-top: 4%;
+        padding-bottom: 5%;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        gap: 100px;
+        background-color: rgb(250,255,248);
+      }
+      .about-container img{
+        width: 500px;
+        height:400px;
+        filter: grayscale(100%);
+      }
+      .about-cont{
+        width: 30%;
+        height: auto;
+        /* background-color: aqua; */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 5%;
+      }
+      .about-cont h3{
+        font-size: 14px;
+        font-weight: bold;
+        font-family: "Cormorant Garamond", serif;
+        color: rgb(199,198,43) ;
+      }
+      .about-cont h2{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 26px;
+        color: rgb(69,94,43);
+      }
+      .about-cont p{
+        font-family: "Poppins", serif;
+        font-size: 14px; 
+        color: rgb(69,94,43);
+      }
+    
+
+
+    /* ...........team............... */
+
+
+    .team-page-container{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .team-title{
+        width: 100%;
+        padding: 2.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .team-title h3{
+        font-size: 14px;
+        font-weight: bold;
+        font-family: "Cormorant Garamond", serif;
+        color: rgb(199,198,43) ;
+      }
+      .team-title h2{
+        font-family: "Cormorant Garamond", serif;
+        font-size: 26px;
+        color: rgb(69,94,43);
+      }
+    .team-container{
+        width: 90%;
+        padding-top: 2%;
+        padding-bottom: 3%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        /* background-color: aquamarine; */
+        gap: 80px;
+    }
+    .team{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        /* background-color: blue; */
+    }
+ 
+    .team img{
+        width: 100%;
+        height: 300px;
+        filter: grayscale(100%);
+    }
+    .team-cont{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2%;
+        gap: 5x;
+    }
+    .team-cont h3{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Cormorant Garamond", serif;
+        color: rgb(199,198,43) ;
+    }
+    .team-cont p{
+        font-family: "Poppins", serif;
+        font-size: 14px; 
+        color: rgb(69,94,43);
+    }
+    
+    
+/* .......foooter........... */
+footer{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:whitesmoke;
+  }
+  .footer-top{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* background-color: aqua; */
+    font-family: "Poppins", serif;
+  }
+  .social-icons{
+    width:20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* background-color: rgb(96, 111, 111); */
+    margin-right: 5%;
+  } 
+  .social-icons img{
+    width: 30px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 10px;
+  
+  }
+  .footer-links a{
+    text-decoration: none;
+    color: black;
+    font-family: "Poppins", serif;
+  }
+  

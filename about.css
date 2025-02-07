@@ -1,0 +1,483 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background: rgba(0, 0, 0, 0.8); */
+    z-index: 1000;
+    /* backdrop-filter: blur(10px); */
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .logo img{
+    width: 100px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    /* background-color: blue; */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+     color: whitesmoke;
+     font-family: "Poppins", serif;
+    font-weight: 200;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(199,198,43);
+  }
+  
+  /* Banner Section */
+  .banner {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("charms-images/WhatsApp Image 2025-01-13 at 14.26.07_0b0ac466.jpg");
+    background-size: cover;
+  }
+  
+  .banner-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Adjust for transparency */
+    z-index: 1;
+  }
+  .banner-cont span{
+    font-size: 28px;
+  }
+  .banner-cont h1{
+    font-size: 72px;
+    font-family: "Cormorant Garamond", serif;
+    color: whitesmoke;
+    text-align: left;
+  }
+  
+  /* Menu Icon (Mobile) */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 5%;
+  }
+  
+  .menu-icon div {
+    width: 25px;
+    height: 3px;
+    background: rgb(43,42,41);
+    margin-left: 10px;
+  }
+  
+  /* Modal for Mobile Nav */
+  .menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    padding: 50px 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .menu-modal.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-modal a {
+    text-decoration: none;
+    color: rgb(43,42,41);
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* Close Button for Modal */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .nav-left, .nav-right {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  
+    .logo {
+      position: static;
+      transform: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  /* ...........ABOUT........... */
+  
+  .about-container{
+    width: 100%;
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 100px;
+    background-color: rgb(250,255,248);
+  }
+  .about-container img{
+    width: 600px;
+    height: 350px;
+  }
+  .about-cont{
+    width: 22%;
+    height: auto;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .about-cont h3{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(199,198,43) ;
+  }
+  .about-cont h2{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    color: rgb(69,94,43);
+  }
+  .about-cont p{
+    font-family: "Poppins", serif;
+    font-size: 14px; 
+    color: rgb(69,94,43);
+  }
+
+  
+
+  /* .........our-story.......... */
+
+  .our-story-container{
+    width: 100%;
+    height: auto;
+  }
+  .our-story-title{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* background-color: aquamarine; */
+  }
+  .our-story-title h3{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(199,198,43) ;
+  }
+  .our-story-title h2{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    color: rgb(69,94,43);
+  }
+  .story{
+
+    width: 100%;
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 100px;
+
+  }
+  .story img{
+    width: 600px;
+    height: 400px;
+    filter: grayscale(100%);
+  }
+  .story-cont{
+    width: 22%;
+    height: auto;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .story-cont h2{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    color:rgb(199,198,43);
+  }
+  .story-cont p{
+    font-family: "Poppins", serif;
+    font-size: 12px; 
+    color: rgb(69,94,43);
+  }
+
+
+  /* .........achievements.......... */
+
+.achievement-page-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+.achivement-title{
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* background-color: aqua; */
+}
+.achivement-title h3{
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(199,198,43) ;
+}
+.achivement-title h2{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  color: rgb(69,94,43);
+}
+.achievement-container{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* background-color: rgb(130, 133, 126); */
+  align-items: center;
+  justify-items: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}   
+.achivement{
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* background-color: black;  */
+  color: rgb(112,150,67);
+  border-left:1px solid rgb(199,198,43) ;
+  border-right:1px solid rgb(199,198,43) ;
+}
+.achivement h2{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgb(199,198,43);
+}
+.achivement p{
+  font-family: "Poppins", serif;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+/* ..........leadership........... */
+
+.leadership-conrtainer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.leadership-title{
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.leadership-title h3{
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(199,198,43) ;
+}
+.leadership-title h2{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  color: rgb(69,94,43);
+}
+.leadership-box{
+  width: 70%;
+  height: auto;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(250,255,248);
+  gap: 20px;
+}
+
+.leadership-box p{
+  font-family: "Poppins", serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: rgb(69,94,43);
+}
+.leadership-box button{
+  width: 150px;
+  height: 50px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid  rgb(69,94,43);
+  background: none;
+  color:rgb(69,94,43);
+  margin-top: 5px;
+}
+
+
+/* ..........awards.......... */
+
+.awards-page-container{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+.award-title{
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+.award-title h3{
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(199,198,43) ;
+  text-transform: uppercase;
+}
+.award-container{
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.award-container img{
+  width: 500px;
+}
+.awards{
+  width: 50%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  /* background-color: aqua; */
+}
+.award{
+  width: 90%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: white;
+}
+.award p{
+  font-family: "Poppins", serif;
+  font-size: 14px;
+  /* text-transform: uppercase; */
+  color: rgb(69,94,43);
+}
+.award span{
+  color: rgb(69,94,43);
+  text-transform: uppercase;
+  font-weight: 500;
+}
