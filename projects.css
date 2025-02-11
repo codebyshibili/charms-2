@@ -1,0 +1,330 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    z-index: 1000;
+    border-bottom: 2px solid  rgb(69,94,43);
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .logo img{
+    width: 100px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    /* background-color: blue; */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+     color: black;
+     font-family: "Poppins", serif;
+    font-weight: 200;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(199,198,43);
+  }
+  
+
+  
+  /* Menu Icon (Mobile) */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 5%;
+  }
+  
+  .menu-icon div {
+    width: 25px;
+    height: 3px;
+    background: rgb(43,42,41);
+    margin-left: 10px;
+  }
+  
+  /* Modal for Mobile Nav */
+  .menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    padding: 50px 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .menu-modal.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-modal a {
+    text-decoration: none;
+    color: rgb(43,42,41);
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* Close Button for Modal */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .nav-left, .nav-right {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  
+    .logo {
+      position: static;
+      transform: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+  /* .....featured............ */
+  .slider {
+    position: relative;
+    width: 95%;
+    height: 90vh;
+    overflow: hidden;
+  }
+  .slider-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  .slider-title h3{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(199,198,43) 
+
+  }
+  
+  .slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 90vh;
+    filter: brightness(70%);
+  }
+  .slide-cont{
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    z-index: 10;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3% 8% 3% 8%;
+    border-radius: 10px;
+  }
+  .slide-cont h3{
+    font-size: 24px;
+    padding: 2%;
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif;
+
+  }
+  .slide-cont p{
+    font-size: 18px;
+    font-family: "Poppins", serif;
+  }
+ .slider button {
+    position: absolute;
+    top: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+  }
+  
+  .slider button.prev {
+    left: 10px;
+  }
+  
+  .slider button.next {
+    right: 10px;
+  }
+
+/* .........projects...... */
+
+
+  .container {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color:rgb(250,255,248);
+    padding-bottom: 2%;
+  }
+  .section-title {
+    font-size: 24px;
+    padding: 2%;
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif;
+    color: rgb(199,198,43) 
+  }
+
+  .grid {
+    width: 100%;
+    display: grid;
+    padding-left: 2%;
+    padding-right: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  .project-card {
+    /* background-color: white; */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  .project-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  .project-title {
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Poppins", serif;
+    color: rgb(69,94,43);
+    /* background-color: rgb(21, 189, 94); */
+  }
+  .view-buttons {
+    margin-top: 20px;
+  }
+  .view-buttons button {
+    width: 150px;
+    height: 50px;
+    font-family: "Cormorant Garamond", serif;
+    border: 2px solid  rgb(199,198,43);
+    background: none;
+    color: rgb(199,198,43);
+  }
+  .hidden-projects {
+    /* display: none; */
+    margin-top: 20px;
+  }
+
+
+
+  /* .......foooter........... */
+footer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:whitesmoke;
+}
+.footer-top{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: aqua; */
+  font-family: "Poppins", serif;
+}
+.social-icons{
+  width:20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* background-color: rgb(96, 111, 111); */
+  margin-right: 5%;
+} 
+.social-icons img{
+  width: 30px;
+}
+.footer-links {
+  display: flex;
+  gap: 10px;
+
+}
+.footer-links a{
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", serif;
+}

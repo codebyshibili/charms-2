@@ -1,0 +1,264 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  
+  /* Navbar Styling */
+  .navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: white;
+    z-index: 1000;
+    border-bottom: 2px solid  rgb(69,94,43);
+  }
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .logo img{
+    width: 100px;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    /* background-color: blue; */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+     color: black;
+     font-family: "Poppins", serif;
+    font-weight: 200;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: rgb(199,198,43);
+  }
+  
+
+  
+  /* Menu Icon (Mobile) */
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 5%;
+  }
+  
+  .menu-icon div {
+    width: 25px;
+    height: 3px;
+    background: rgb(43,42,41);
+    margin-left: 10px;
+  }
+  
+  /* Modal for Mobile Nav */
+  .menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    padding: 50px 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .menu-modal.active {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .menu-modal a {
+    text-decoration: none;
+    color: rgb(43,42,41);
+    font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  /* Close Button for Modal */
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .nav-left, .nav-right {
+      display: none;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  
+    .logo {
+      position: static;
+      transform: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+
+  /* .........contact............... */
+
+
+  
+  .contact-section {
+    display: flex;
+    width: 90%;
+    background: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-top: 90px;
+  }
+  
+  .contact-info {
+    background: rgb(69,94,43);
+    color: white;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+  }
+  
+  .contact-info h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .contact-info p {
+    margin-bottom: 12px;
+    font-family: "Poppins", serif;
+    color: rgb(184, 183, 183);
+  }
+  
+  .contact-form {
+    padding: 30px;
+    width: 60%;
+    background: #ffffff;
+  }
+  
+  .contact-form h2 {
+    color: rgb(199,198,43);
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .contact-form p {
+    margin-bottom: 20px;
+    color: rgb(69,94,43);
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background: rgb(199,198,43);
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  iframe{
+    width: 90%;
+    height: 60vh;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+
+  
+  /* .......foooter........... */
+footer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:whitesmoke;
+}
+.footer-top{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  /* background-color: aqua; */
+  font-family: "Poppins", serif;
+}
+.social-icons{
+  width:20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* background-color: rgb(96, 111, 111); */
+  margin-right: 5%;
+} 
+.social-icons img{
+  width: 30px;
+}
+.footer-links {
+  display: flex;
+  gap: 10px;
+
+}
+.footer-links a{
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", serif;
+}
