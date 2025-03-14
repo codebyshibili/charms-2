@@ -262,3 +262,38 @@ footer{
   color: black;
   font-family: "Poppins", serif;
 }
+
+
+
+
+
+
+@media (max-width: 800px){
+  iframe{
+    height: 40vh;
+  }
+  
+  
+  .contact-section{
+    flex-direction: column;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact-form{
+    width: 100%;
+  }
+
+
+  /* footer */
+
+ .social-icons{
+  display: none;
+ }
+
+ .footer-links{
+  display: none;
+ }
+
+
+}

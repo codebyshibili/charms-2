@@ -150,6 +150,7 @@
         font-family: "Cormorant Garamond", serif;
         font-size: 26px;
         color:rgb(199,198,43);
+        text-align: center;
     }
   
     .about-container{
@@ -311,3 +312,47 @@ footer{
     font-family: "Poppins", serif;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 800px){
+
+    .about-container{
+      flex-direction: column;
+      padding: 5%;
+      gap: 20px;
+    }
+    .about-container img{
+      width: 100%;
+      height: 300px;
+    }
+    .about-cont{
+      width: 100%;
+      text-align: center;
+    }
+
+
+    .team-container{
+      grid-template-columns: repeat(1,1fr);
+
+  }
+
+  
+  .social-icons{
+    display: none;
+   }
+  
+   .footer-links{
+    display: none;
+   }
+  
+
+  }
